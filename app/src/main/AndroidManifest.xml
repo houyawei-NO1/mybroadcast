@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver
-            android:name=".MyStaticReceiver"
+        <service
+            android:name=".MyService"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.duduyun.action.RADAR_STATUS"/>
-            </intent-filter>
-        </receiver>
-
+            android:exported="true"></service>
+         <receiver
+         android:name=".MyStaticReceiver"
+         android:enabled="true"
+         android:exported="true">
+         <intent-filter>
+         <action android:name="com.duduyun.action.RADAR_STATUS"/>
+         </intent-filter>
+         </receiver>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
